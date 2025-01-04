@@ -37,8 +37,8 @@ public class Game {
         }
 
         String receiverNumber = switch (playerIdentify) {
-            case FIRST -> secondPlayer.getNumber();
-            case SECOND -> firstPlayer.getNumber();
+            case FIRST -> firstPlayer.getNumber();
+            case SECOND -> secondPlayer.getNumber();
         };
 
         return CallStrategy.call(receiverNumber, number);
