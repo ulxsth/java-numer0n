@@ -10,7 +10,7 @@ import lombok.Setter;
 public class Game {
     @Getter private int turn;
 
-    @NonNull @Setter
+    @NonNull
     private GameConfig config;
     @NonNull
     private Player firstPlayer;
