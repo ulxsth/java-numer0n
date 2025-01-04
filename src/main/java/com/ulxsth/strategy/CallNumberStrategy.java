@@ -10,7 +10,11 @@ public class CallNumberStrategy {
         return new CallResult(eat, bite, isCorrect);
     }
 
-    public static int getEat(String number, String callNumber) {
+    public static int getEat(String number, String callNumber) throws IllegalArgumentException {
+        if(number.length() != callNumber.length()) {
+            throw new IllegalArgumentException("The length of the numbers must be the same.");
+        }
+
         int eat = 0;
         for (int i = 0; i < number.length(); i++) {
             if (number.charAt(i) == callNumber.charAt(i)) {
