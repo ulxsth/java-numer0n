@@ -1,6 +1,5 @@
-import com.ulxsth.*;
-import com.ulxsth.error.InvalidCallNumberException;
-import com.ulxsth.error.InvalidCallNumberReason;
+package com.ulxsth;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
