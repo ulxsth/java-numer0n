@@ -1,4 +1,4 @@
-package com.ulxsth;
+package com.ulxsth.error;
 
 import lombok.Getter;
 
