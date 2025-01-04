@@ -3,13 +3,19 @@ package com.ulxsth;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
+@Getter
 @RequiredArgsConstructor
 public class Game {
     @Getter private int turn;
-    @NonNull private GameConfig config;
-    @NonNull @Getter private Player firstPlayer;
-    @NonNull @Getter private Player secondPlayer;
+
+    @NonNull @Setter
+    private GameConfig config;
+    @NonNull
+    private Player firstPlayer;
+    @NonNull
+    private Player secondPlayer;
 
     public void nextTurn() {
         turn++;
