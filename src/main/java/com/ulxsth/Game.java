@@ -19,7 +19,7 @@ public class Game {
         turn = 0;
     }
 
-    public CallResultAndCorrectness call(@NonNull Player firstPlayer, String number) {
+    public CallResultAndCorrectness call(@NonNull Player receiver, String number) {
         return null;
     }
 }
