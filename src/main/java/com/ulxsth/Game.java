@@ -13,8 +13,6 @@ import lombok.RequiredArgsConstructor;
 public class Game {
     @Getter
     private int turn;
-    @Getter
-    private boolean isFinished;
 
     @NonNull
     private GameConfig config;
@@ -29,10 +27,6 @@ public class Game {
 
     public void resetTurn() {
         turn = 0;
-    }
-
-    public void finish() {
-        isFinished = true;
     }
 
     public CallResult call(PlayerIdentify playerIdentify, String number) {
