@@ -2,7 +2,7 @@ package com.ulxsth.strategy;
 
 import com.ulxsth.CallResult;
 
-public class CallNumberStrategy {
+public class CallStrategy {
     public static CallResult call(String number, String callNumber) throws IllegalArgumentException {
         int eat = getEat(number, callNumber);
         int bite = getBite(number, callNumber) - eat;

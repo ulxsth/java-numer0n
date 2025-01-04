@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class CallNumberStrategyTest {
+class CallStrategyTest {
 
     @Nested
     class testCall {
@@ -21,7 +21,7 @@ class CallNumberStrategyTest {
                 String callNumber = "123";
 
                 // Act
-                var result = CallNumberStrategy.call(number, callNumber);
+                var result = CallStrategy.call(number, callNumber);
 
                 // Assert
                 assertEquals(3, result.getEat(), "Expected all characters to match exactly.");
@@ -36,7 +36,7 @@ class CallNumberStrategyTest {
                 String callNumber = "567";
 
                 // Act
-                var result = CallNumberStrategy.call(number, callNumber);
+                var result = CallStrategy.call(number, callNumber);
 
                 // Assert
                 assertEquals(0, result.getEat(), "Expected no matching characters in the correct positions.");
@@ -51,7 +51,7 @@ class CallNumberStrategyTest {
                 String callNumber = "127";
 
                 // Act
-                var result = CallNumberStrategy.call(number, callNumber);
+                var result = CallStrategy.call(number, callNumber);
 
                 // Assert
                 assertEquals(2, result.getEat(), "Expected exact matches for two characters.");
@@ -66,7 +66,7 @@ class CallNumberStrategyTest {
                 String callNumber = "312";
 
                 // Act
-                var result = CallNumberStrategy.call(number, callNumber);
+                var result = CallStrategy.call(number, callNumber);
 
                 // Assert
                 assertEquals(0, result.getEat(), "Expected no matching characters in the right positions.");
@@ -81,7 +81,7 @@ class CallNumberStrategyTest {
                 String callNumber = "132";
 
                 // Act
-                var result = CallNumberStrategy.call(number, callNumber);
+                var result = CallStrategy.call(number, callNumber);
 
                 // Assert
                 assertEquals(1, result.getEat(), "Expected exact match for one character.");
@@ -99,7 +99,7 @@ class CallNumberStrategyTest {
                 String callNumber = "12345";
 
                 // Act & Assert
-                assertThrows(IllegalArgumentException.class, () -> CallNumberStrategy.call(number, callNumber),
+                assertThrows(IllegalArgumentException.class, () -> CallStrategy.call(number, callNumber),
                         "Expected an exception when strings are of different lengths.");
             }
         }
