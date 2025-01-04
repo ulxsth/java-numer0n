@@ -7,11 +7,17 @@ import com.ulxsth.unit.strategy.DuplicateDigitStrategy;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @RequiredArgsConstructor
 public class Game {
-    @Getter private int turn;
+    @Getter
+    private int turn;
+    @Getter
+    private boolean isFinished;
+    @Getter @Setter
+    private PlayerIdentify winner;
 
     @NonNull
     private GameConfig config;
@@ -26,6 +32,10 @@ public class Game {
 
     public void resetTurn() {
         turn = 0;
+    }
+
+    public void finish() {
+        isFinished = true;
     }
 
     public CallResult call(PlayerIdentify playerIdentify, String number) {
