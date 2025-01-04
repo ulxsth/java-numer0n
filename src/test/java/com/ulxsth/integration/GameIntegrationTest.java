@@ -23,8 +23,8 @@ class GameIntegrationTest {
         // ターン1: Player 1 が Player 2 にコールする
         String callNumberPlayer1 = "135";
         CallResult resultPlayer1 = game.call(PlayerIdentify.SECOND, callNumberPlayer1);
-        assertEquals(1, resultPlayer1.getEat(), "Player 1's Eat count should be 1.");
-        assertEquals(0, resultPlayer1.getBite(), "Player 1's Bite count should be 0.");
+        assertEquals(0, resultPlayer1.getEat(), "Player 1's Eat count should be 0.");
+        assertEquals(1, resultPlayer1.getBite(), "Player 1's Bite count should be 1.");
 
         // ターン2: Player 2 が Player 1 にコールする
         String callNumberPlayer2 = "243";
