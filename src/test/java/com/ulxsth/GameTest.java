@@ -62,14 +62,13 @@ class GameTest {
             @Test
             void testCall_InvalidDigit() {
                 // Arrange
-                String number = "1234";
-                String callNumber = "243";
+                String callNumber = "1234";
 
                 // Act & Assert
                 InvalidCallNumberException exception = assertThrows(InvalidCallNumberException.class,
                         () -> game.call(PlayerIdentify.FIRST, callNumber));
 
-                assertEquals(InvalidCallNumberReason.CANT_USE_ZERO, exception.getReason(),
+                assertEquals(InvalidCallNumberReason.INVALID_DIGIT, exception.getReason(),
                         "Expected an exception with reason INVALID_DIGIT.");
                 assertEquals(callNumber, exception.getNumber(),
                         "Expected an exception with the invalid number.");
