@@ -16,6 +16,7 @@ public class Game {
     }
 
     public void resetTurn() {
+        turn = 0;
     }
 
     public CallResultAndCorrectness call(@NonNull Player firstPlayer, String number) {
