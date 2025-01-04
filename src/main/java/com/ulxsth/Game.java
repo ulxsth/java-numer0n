@@ -7,7 +7,6 @@ import com.ulxsth.unit.strategy.DuplicateDigitStrategy;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 
 @Getter
 @RequiredArgsConstructor
@@ -16,8 +15,6 @@ public class Game {
     private int turn;
     @Getter
     private boolean isFinished;
-    @Getter @Setter
-    private PlayerIdentify winner;
 
     @NonNull
     private GameConfig config;
