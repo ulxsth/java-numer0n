@@ -33,6 +33,10 @@ public class Game {
             throw new InvalidCallNumberException(number, InvalidCallNumberReason.INVALID_DIGIT);
         }
 
+        if(!number.matches("[0-9]+")) {
+            throw new InvalidCallNumberException(number, InvalidCallNumberReason.INVALID_CHARS);
+        }
+
         if(!config.includeZero() && number.contains("0")) {
             throw new InvalidCallNumberException(number, InvalidCallNumberReason.CANT_USE_ZERO);
         }
