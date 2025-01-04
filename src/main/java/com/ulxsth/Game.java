@@ -32,7 +32,7 @@ public class Game {
             throw new InvalidCallNumberException(number, InvalidCallNumberReason.INVALID_DIGIT);
         }
 
-        if(config.includeZero() && number.contains("0")) {
+        if(!config.includeZero() && number.contains("0")) {
             throw new InvalidCallNumberException(number, InvalidCallNumberReason.CANT_USE_ZERO);
         }
 
