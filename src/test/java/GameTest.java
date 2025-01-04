@@ -1,4 +1,6 @@
 import com.ulxsth.*;
+import com.ulxsth.error.InvalidCallNumberException;
+import com.ulxsth.error.InvalidCallNumberReason;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
@@ -48,10 +50,17 @@ class GameTest {
         }
 
         @Test
-        void testCallPartialMatch() {
+        void testCallPartialEat() {
             CallResultAndCorrectness result = game.call(game.getSecondPlayer(), "124");
             assertEquals(2, result.result().eat());
             assertEquals(0, result.result().bite());
+        }
+
+        @Test
+        void testCallPartialBite() {
+            CallResultAndCorrectness result = game.call(game.getFirstPlayer(), "321");
+            assertEquals(0, result.result().eat());
+            assertEquals(3, result.result().bite());
         }
 
         @Test
