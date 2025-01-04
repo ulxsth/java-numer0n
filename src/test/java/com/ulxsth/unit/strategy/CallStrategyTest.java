@@ -1,4 +1,4 @@
-package com.ulxsth.strategy;
+package com.ulxsth.unit.strategy;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

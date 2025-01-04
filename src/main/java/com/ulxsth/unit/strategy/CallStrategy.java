@@ -1,4 +1,4 @@
-package com.ulxsth.strategy;
+package com.ulxsth.unit.strategy;
 
 import com.ulxsth.CallResult;
 

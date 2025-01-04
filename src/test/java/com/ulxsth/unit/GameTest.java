@@ -1,5 +1,9 @@
-package com.ulxsth;
+package com.ulxsth.unit;
 
+import com.ulxsth.Game;
+import com.ulxsth.GameConfig;
+import com.ulxsth.Player;
+import com.ulxsth.PlayerIdentify;
 import com.ulxsth.error.InvalidCallNumberException;
 import com.ulxsth.error.InvalidCallNumberReason;
 import org.junit.jupiter.api.BeforeEach;
