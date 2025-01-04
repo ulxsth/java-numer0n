@@ -12,6 +12,7 @@ public class Game {
     @NonNull @Getter private Player secondPlayer;
 
     public void nextTurn() {
+        turn++;
     }
 
     public void resetTurn() {
