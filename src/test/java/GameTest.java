@@ -43,31 +43,31 @@ class GameTest {
     class Call {
         @Test
         void testCallExactMatch() {
-            CallResultAndCorrectness result = game.call(game.getFirstPlayer(), "123");
-            assertEquals(3, result.result().eat());
-            assertEquals(0, result.result().bite());
+            CallResult result = game.call(game.getFirstPlayer(), "123");
+            assertEquals(3, result.getEat());
+            assertEquals(0, result.getBite());
             assertTrue(result.isCorrect());
         }
 
         @Test
         void testCallPartialEat() {
-            CallResultAndCorrectness result = game.call(game.getSecondPlayer(), "124");
-            assertEquals(2, result.result().eat());
-            assertEquals(0, result.result().bite());
+            CallResult result = game.call(game.getSecondPlayer(), "124");
+            assertEquals(2, result.getEat());
+            assertEquals(0, result.getBite());
         }
 
         @Test
         void testCallPartialBite() {
-            CallResultAndCorrectness result = game.call(game.getFirstPlayer(), "321");
-            assertEquals(0, result.result().eat());
-            assertEquals(3, result.result().bite());
+            CallResult result = game.call(game.getFirstPlayer(), "321");
+            assertEquals(0, result.getEat());
+            assertEquals(3, result.getBite());
         }
 
         @Test
         void testCallNoMatch() {
-            CallResultAndCorrectness result = game.call(game.getFirstPlayer(), "789");
-            assertEquals(0, result.result().eat());
-            assertEquals(0, result.result().bite());
+            CallResult result = game.call(game.getFirstPlayer(), "789");
+            assertEquals(0, result.getEat());
+            assertEquals(0, result.getBite());
         }
 
         @Test
