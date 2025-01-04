@@ -3,6 +3,7 @@ package com.ulxsth;
 import com.ulxsth.error.InvalidCallNumberException;
 import com.ulxsth.error.InvalidCallNumberReason;
 import com.ulxsth.strategy.CallStrategy;
+import com.ulxsth.strategy.DuplicateDigitStrategy;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
@@ -34,6 +35,10 @@ public class Game {
 
         if(!config.includeZero() && number.contains("0")) {
             throw new InvalidCallNumberException(number, InvalidCallNumberReason.CANT_USE_ZERO);
+        }
+
+        if(DuplicateDigitStrategy.hasDuplicateDigit(number)) {
+            throw new InvalidCallNumberException(number, InvalidCallNumberReason.DUPLICATE_DIGIT);
         }
 
         String receiverNumber = switch (playerIdentify) {
