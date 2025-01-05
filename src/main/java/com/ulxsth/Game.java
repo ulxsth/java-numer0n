@@ -2,8 +2,8 @@ package com.ulxsth;
 
 import com.ulxsth.error.InvalidCallNumberException;
 import com.ulxsth.error.InvalidCallNumberReason;
-import com.ulxsth.unit.strategy.CallStrategy;
-import com.ulxsth.unit.strategy.DuplicateDigitStrategy;
+import com.ulxsth.strategy.CallStrategy;
+import com.ulxsth.strategy.DuplicateDigitStrategy;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;

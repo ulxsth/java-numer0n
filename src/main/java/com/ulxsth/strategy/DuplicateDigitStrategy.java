@@ -1,4 +1,4 @@
-package com.ulxsth.unit.strategy;
+package com.ulxsth.strategy;
 
 public class DuplicateDigitStrategy {
     public static boolean hasDuplicateDigit(String number) {
