@@ -15,7 +15,7 @@ jobs:
           distribution: 'oracle'
           cache: gradle
       - name: Build with Gradle
-        run: ./gradlew build
+        run: gradle build
       - name: Test with Gradle
-        run: ./gradlew test
+        run: gradle test
         
