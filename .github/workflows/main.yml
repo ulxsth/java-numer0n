@@ -16,7 +16,6 @@ jobs:
           cache: gradle
       - name: Build with Gradle
         run: ./gradlew build
-        working-directory: ./java-numer0n
       - name: Test with Gradle
         run: ./gradlew test
         
